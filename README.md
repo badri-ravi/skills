@@ -31,17 +31,21 @@ Add the new skill to the table above. Keep instructions portable; document any h
 
 ## Install in a coding harness
 
-Copy `skills/easyui` into a skill location supported by your harness. Keep the folder named `easyui` so it matches the skill's metadata. The exact same `SKILL.md` works in each location below. For future skills, replace `easyui` with the desired skill's name.
+See the **[installation guide](INSTALL.md)** for step-by-step instructions, Windows and macOS/Linux commands, project-only installs, updates, and troubleshooting. It covers Codex, Claude Code, GitHub Copilot, Cursor, and Claude web/Desktop.
+
+Copy `skills/easyui` into a supported skill location. Keep the folder named `easyui`. The same skill document works in each location below; future skills follow the same pattern.
 
 | Harness | Project location | Personal location | Official documentation |
 | --- | --- | --- | --- |
 | Codex | `.agents/skills/easyui/SKILL.md` | `~/.agents/skills/easyui/SKILL.md` | [Codex skills](https://learn.chatgpt.com/docs/build-skills) |
 | Claude Code | `.claude/skills/easyui/SKILL.md` | `~/.claude/skills/easyui/SKILL.md` | [Claude Code skills](https://code.claude.com/docs/en/skills) |
 | GitHub Copilot | `.github/skills/easyui/SKILL.md` or `.agents/skills/easyui/SKILL.md` | `~/.copilot/skills/easyui/SKILL.md` or `~/.agents/skills/easyui/SKILL.md` | [Copilot agent skills](https://docs.github.com/en/copilot/concepts/agents/about-agent-skills) |
+| Cursor | `.cursor/skills/easyui/SKILL.md` or `.agents/skills/easyui/SKILL.md` | `~/.cursor/skills/easyui/SKILL.md` or `~/.agents/skills/easyui/SKILL.md` | [Cursor skills](https://cursor.com/docs/skills) |
+| Claude web/Desktop | Upload a ZIP of the individual skill folder | Enabled through your Claude account | [Claude skill uploads](https://support.claude.com/en/articles/12512180-use-skills-in-claude) |
 
 `~` means your home directory. Locations and invocation features can vary by harness version; the linked documentation describes current support. Installing the same skill in multiple locations within one harness may create duplicates. Choose one location for that harness.
 
-To maintain one source, clone this repository and copy or, where supported, symlink its `skills/easyui` folder into the chosen skill location. Pull updates to the clone, then refresh copied installations. Codex and Copilot can share a supported `.agents/skills` installation. Claude Code uses its own documented location.
+To maintain one source, clone this repository and copy or, where supported, symlink its `skills/easyui` folder into the chosen skill location. Pull updates to the clone, then refresh copied installations. Codex, Copilot, and Cursor can share a supported `.agents/skills` installation. Claude Code uses its own documented location.
 
 For a harness without native skill discovery, provide `skills/easyui/SKILL.md` as context and ask it to follow the document. Automatic selection and slash-command support depend on the harness, not this file.
 
