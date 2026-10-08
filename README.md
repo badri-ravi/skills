@@ -1,12 +1,37 @@
-# EasyUI skill
+# Skills
 
-A portable agent skill for discovering, integrating, and adapting [EasyUI](https://www.easyui.site/) animated React components.
+A growing collection of portable agent skills for use across coding harnesses.
 
-The reusable artifact is [`easyui/SKILL.md`](easyui/SKILL.md). It uses the [Agent Skills format](https://agentskills.io/specification): YAML metadata followed by Markdown instructions. It contains no harness-specific tool names, executable hooks, or plugin dependencies.
+## Available skills
+
+| Skill | Purpose | Document |
+| --- | --- | --- |
+| `easyui` | Discover, integrate, and adapt [EasyUI](https://www.easyui.site/) animated React components | [SKILL.md](skills/easyui/SKILL.md) |
+
+Each skill uses the [Agent Skills format](https://agentskills.io/specification): YAML metadata followed by Markdown instructions. The EasyUI skill contains no harness-specific tool names, executable hooks, or plugin dependencies.
+
+## Repository structure
+
+```text
+skills/
+├── README.md
+├── LICENSE
+└── skills/
+    └── easyui/
+        └── SKILL.md
+```
+
+The outer `skills` directory is the repository; the inner `skills` directory contains individual skills. Add future skills as siblings of `easyui`.
+
+## Add another skill
+
+Create `skills/<skill-name>/SKILL.md` with a lowercase, hyphenated folder name matching its YAML `name`. Include a `description` that explains the capability and when to use it. Write the instructions below the YAML frontmatter. Add `references/`, `scripts/`, or `assets/` inside that skill only when they support its workflow, and use relative links.
+
+Add the new skill to the table above. Keep instructions portable; document any harness-specific requirements rather than silently assuming a tool or integration exists.
 
 ## Install in a coding harness
 
-Copy the `easyui` directory into a skill location supported by your harness. Keep the folder named `easyui` so it matches the skill's metadata. The exact same `SKILL.md` works in each location below.
+Copy `skills/easyui` into a skill location supported by your harness. Keep the folder named `easyui` so it matches the skill's metadata. The exact same `SKILL.md` works in each location below. For future skills, replace `easyui` with the desired skill's name.
 
 | Harness | Project location | Personal location | Official documentation |
 | --- | --- | --- | --- |
@@ -16,9 +41,9 @@ Copy the `easyui` directory into a skill location supported by your harness. Kee
 
 `~` means your home directory. Locations and invocation features can vary by harness version; the linked documentation describes current support. Installing the same skill in multiple locations within one harness may create duplicates. Choose one location for that harness.
 
-To maintain one source, clone this repository and copy or, where supported, symlink its `easyui` folder into the chosen skill location. Pull updates to the clone, then refresh copied installations. Codex and Copilot can share a supported `.agents/skills` installation. Claude Code uses its own documented location.
+To maintain one source, clone this repository and copy or, where supported, symlink its `skills/easyui` folder into the chosen skill location. Pull updates to the clone, then refresh copied installations. Codex and Copilot can share a supported `.agents/skills` installation. Claude Code uses its own documented location.
 
-For a harness without native skill discovery, provide `easyui/SKILL.md` as context and ask it to follow the document. Automatic selection and slash-command support depend on the harness, not this file.
+For a harness without native skill discovery, provide `skills/easyui/SKILL.md` as context and ask it to follow the document. Automatic selection and slash-command support depend on the harness, not this file.
 
 ## Use
 
