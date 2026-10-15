@@ -1,0 +1,40 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "badri-ravi-skills",
+  "description": "Reusable skills for AI coding assistants.",
+  "owner": {
+    "name": "badri-ravi"
+  },
+  "metadata": {
+    "version": "1.0.0"
+  },
+  "plugins": [
+    {
+      "name": "easyui",
+      "description": "Finds, integrates, and adapts animated EasyUI components for React interfaces.",
+      "source": "./",
+      "strict": false,
+      "license": "MIT",
+      "category": "development",
+      "skills": ["./skills/easyui"]
+    },
+    {
+      "name": "clarity-first-ui",
+      "description": "Designs, improves, and reviews interfaces using hierarchy, layout, typography, color, and components while preserving existing branding.",
+      "source": "./",
+      "strict": false,
+      "license": "MIT",
+      "category": "design",
+      "skills": ["./skills/clarity-first-ui"]
+    },
+    {
+      "name": "react-performance",
+      "description": "Diagnoses and improves React performance through state ownership, composition, memoization, Context boundaries, effect timing, and request orchestration.",
+      "source": "./",
+      "strict": false,
+      "license": "MIT",
+      "category": "development",
+      "skills": ["./skills/react-performance"]
+    }
+  ]
+}

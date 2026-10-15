@@ -35,4 +35,13 @@ npx skills remove easyui -a claude-code -g
 
 Replace `claude-code` with `codex`, `cursor`, or `opencode`. For a project-only installation, run from the project root and omit `-g`.
 
-For Claude web/Desktop, upload a ZIP of the individual skill folder through [Customize > Skills](https://support.claude.com/en/articles/12512180-use-skills-in-claude). To update, replace the uploaded skill with a fresh ZIP; to remove, delete it there.
+## Claude Desktop and Claude Code marketplace
+
+This repository is also a plugin marketplace (`.claude-plugin/marketplace.json`), with one plugin per skill.
+
+- **Claude Desktop:** add the marketplace `badri-ravi/skills` from the plugin/skill marketplace settings, then install the skills you want.
+- **Claude Code:** run `/plugin marketplace add badri-ravi/skills`, then `/plugin install easyui@badri-ravi-skills` (or `clarity-first-ui`, `react-performance`).
+
+Update with `/plugin marketplace update badri-ravi-skills`; remove with `/plugin uninstall easyui@badri-ravi-skills`.
+
+Alternatively, for Claude web/Desktop, upload a ZIP of the individual skill folder through [Customize > Skills](https://support.claude.com/en/articles/12512180-use-skills-in-claude). To update, replace the uploaded skill with a fresh ZIP; to remove, delete it there.

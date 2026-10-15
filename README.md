@@ -8,4 +8,6 @@ Reusable skills for AI coding assistants.
 | [clarity-first-ui](skills/clarity-first-ui/SKILL.md) | Designs, improves, and reviews interfaces using hierarchy, layout, typography, color, and components while preserving existing branding. |
 | [react-performance](skills/react-performance/SKILL.md) | Diagnoses and improves React performance through state ownership, composition, memoization, Context boundaries, effect timing, and request orchestration. |
 
+Add to Claude Desktop or Claude Code as a marketplace: `badri-ravi/skills`.
+
 [Installation guide](INSTALL.md) · [License](LICENSE)
